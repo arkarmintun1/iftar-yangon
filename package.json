@@ -1,0 +1,26 @@
+{
+  "name": "iftar-yangon",
+  "version": "1.0.0",
+  "description": "Iftar Shops in Yangon",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [
+    "Iftar",
+    "Shops",
+    "Yangon"
+  ],
+  "author": "Arkar Min Tun",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
