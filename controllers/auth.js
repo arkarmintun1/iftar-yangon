@@ -46,6 +46,29 @@ exports.login = asyncHandler(async (req, res, next) => {
     sendTokenResponse(user, 200, res);
 });
 
+// @desc        Logout user
+// @route       GET /api/v1/auth/logout
+// @access      Private
+exports.logout = asyncHandler(async (req, res, next) => {
+    res.status(200).json({
+        success: true,
+        data: {}
+    });
+});
+
+// @desc        Get current logged in user
+// @route       GET /api/v1/auth/me
+// @access      Private
+exports.getMe = (req, res, next) => {
+    const user = req.user;
+
+    res.status(200).json({
+        success: true,
+        data: user
+    });
+};
+
+
 // Get token from model and send response
 const sendTokenResponse = (user, statusCode, res) => {
     const token = user.getSignedJwtToken();
